@@ -13,7 +13,10 @@ implementation, including the original Clear Sky Institute services (while they 
 
 ## Related
 
-* [HamClock Client](https://github.com/komacke/hamclock) - reference frontend implementation
-* [HamClockLauncher](https://github.com/huberthickman/HamClockLauncher) - frontend installer/launcher
-* [Open HamClock Backend](https://github.com/komacke/open-hamclock-backend) - reference backend implementation
-* [HamClock Standards](https://github.com/openhamclock/hamclock-standards)
+* [HamClock Standards](https://github.com/openhamclock/hamclock-standards) - specifications source
+* [HamClock Client](https://github.com/komacke/hamclock) - reference frontend implementation source
+* [HamClockLauncher](https://github.com/huberthickman/HamClockLauncher) - frontend installer/launcher source
+* Open Hamclock Backend project
+    * <https://ohb.works/> - main site
+    * <https://github.com/komacke/open-hamclock-backend> - source
+* [hamclock.com](https://hamclock.com) backend
