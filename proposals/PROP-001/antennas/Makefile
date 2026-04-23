@@ -1,3 +1,8 @@
+# Makefile for antenna data and lookup
+# Copyright(c) 2026 HamClock Contributors and David Strickland KR8X
+# Licensed under the MIT License.
+# See LICENSE file in the project root for full license information
+
 # Compiler settings
 CXX      := g++
 CXXFLAGS := -Wall -Wextra -std=c++17

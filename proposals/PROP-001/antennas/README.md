@@ -7,34 +7,56 @@ The Backend / HamClock api provides methods for fetching voacap propagation info
 > /ham/HamClock/fetchBandConditions.pl
 > /ham/HamClock/fetchVOACAPArea.pl
 > /ham/HamClock/fetchVOACAP-TOA.pl
-
-Those functions take three optional arguments described herein
-
-> &ANTTX=
-> &ANtRX=
-> &ANTTXRX=
+> /ham/HamClock/fetchVOACAP-MUF.pl
 
 
-### ANTTXRX
+Those functions take five optional arguments described herein
+
+> &ANTDEINDEX=
+> &ANTDXINDEX=
+> &ANTDEDXCONTROL=
+> &ANTDEAZ=
+> &ANTDXAZ= 
+
+## Compatibility
+
+To provide information to the client, fetchBandCondictions.pl is also impacted to take an additional argument:
+
+> &FORMAT=
+
+Format=0 or absent indicates no special processing for compatibility is done. Existing processing and processing of the five optional arguments is performed.
+
+For Format=1, the backend looks for any of the five arguments above and creates a csv table of: parametername,parametervaluereceived,parametervalueused.  This information can be used by the client to determine if a value such as antenna index is supported by the backend.
+
+
+
+## Parameters
+
+
+### ANTDEDXCONTROL
 
 This argument controls what Antennas will be using for voacap propagation analysis. If missing, the value 0 isused
 
-Values are specified as ANTTXRX=anttxrx where antxrx is processed as in the following table
+Values are specified as ANTDEDXCONTROL=control where control is processed as in the following table
 
-| anttxrx | Description              |
-|---------|--------------------------|
-|    0    | process as default       |
-|    1    | Use ANTTX                |
-|    2    | Use ANTRX                |
-|    3    | Use both ANTTX and ANTRX |
+| control | Description                        |
+|---------|------------------------------------|
+|    0    | process as default                 |
+|    1    | Use ANTDEINDEX                     |
+|    2    | Use ANTDXINDEX                     |
+|    3    | Use both ANTDEINDEX and ANTDXINDEX |
 
-### ANTTX, ANTRX
-These parameters control what antenna profile is used for Transmission and Reception for the De and DX station respectively.
+### ANTDEINDEX, ANTDXINDEX
+These parameters control what antenna profile is used for the DE and DX stations.
 
 The value used is defined in the voacap.ant.csv file which is the specification of the interface. voacap antenna path is given; however,
-the method used by the backend in implementation independent.
+the method used by the backend is implementation independent.
 Instead of just showing the raw numeric value index, they are shown as msb and lsb values where the index is calculated as:
 > index=msb*256+lsb
+
+### ANTDEAZ, ANTDXAZ
+
+These parameters set the antenna azimuth for the DE and DX locations respectively.
 
 ## Files
 
@@ -65,7 +87,7 @@ usage:
 python3 gen_antenna_data.py voacap.ant.csv antenna_data.py
 ```
 
-### gen_antenna_data.showing
+### gen_antenna_data.sh
 
 bash script to generate antenna_data.h from voacap.ant.csv
 Intended for use on the HamClock client side.

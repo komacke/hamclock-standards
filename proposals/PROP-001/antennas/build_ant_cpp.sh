@@ -3,6 +3,9 @@
 # build_ant_cpp.sh -- Generate and build all antenna C++ targets
 # Usage: ./build_ant_cpp.sh
 # =============================================================================
+# Copyright(c) 2026 HamClock Contributors and David Strickland KR8X
+# Licensed under the MIT License.
+# See LICENSE file in the project root for full license information
 set -euo pipefail
 
 CSV="voacap.ant.csv"
