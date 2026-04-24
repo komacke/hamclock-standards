@@ -54,9 +54,12 @@ the method used by the backend is implementation independent.
 Instead of just showing the raw numeric value index, they are shown as msb and lsb values where the index is calculated as:
 > index=msb*256+lsb
 
+Since a method for compatibility is described above, the only required index for an 
+implementation is 0 - the default omnidirectional antenna.  An implementation can implement a subset. 
+
 ### ANTDEAZ, ANTDXAZ
 
-These parameters set the antenna azimuth for the DE and DX locations respectively.
+These parameters set the antenna azimuth in degrees for the DE and DX locations respectively. The range is 0.0 through 359.9 .
 
 ## Files
 
