@@ -1,3 +1,12 @@
+# Makefile for antenna data and lookup
+# LICENSE_BEGIN
+# Copyright (c) 2026 David Strickland KR8X and openhamclock/hamclock-standards
+# See https://github.com/openhamclock/hamclock-standards/blob/main/LICENSE.md
+#
+# Licensed under Apache License 2.0
+# https://www.apache.org/licenses/LICENSE-2.0
+# LICENSE_END 
+
 # Compiler settings
 CXX      := g++
 CXXFLAGS := -Wall -Wextra -std=c++17
