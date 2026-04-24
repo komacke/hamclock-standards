@@ -2,9 +2,13 @@
 antenna_lookup.py  --  Builds and exposes the runtime lookup dict.
 Import this anywhere you need antenna resolution.
 """
-# Copyright (C) 2026 Open HamClock Backend (OHB) Contributors and David Strickland KR8X
-# License: GNU Affero General Public License v3.0 (AGPLv3)
-# See LICENSE file or <https://www.gnu.org/licenses/agpl-3.0.html>
+# LICENSE_BEGIN
+# Copyright (c) 2026 David Strickland KR8X and openhamclock/hamclock-standards
+# See https://github.com/openhamclock/hamclock-standards/blob/main/LICENSE.md
+#
+# Licensed under Apache License 2.0
+# https://www.apache.org/licenses/LICENSE-2.0
+# LICENSE_END 
 from antenna_data import ANTENNA_DATA
 
 # key = msb*256 + lsb  →  {'path': ..., 'description': ...}
