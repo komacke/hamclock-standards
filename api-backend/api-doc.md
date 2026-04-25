@@ -4,7 +4,7 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 ---
 
 | path | Argument | Units | Min | Max | Default | required | sample values |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--: | :--: | :--: | :--: | :--: | :--- |
 | /ham/HamClock/Bz/Bz.txt | | | | | | | |
 | /ham/HamClock/NOAASpaceWX/noaaswx.txt | | | | | | | |
 | /ham/HamClock/NOAASpaceWX/rank2_coeffs.txt | | | | | | | |

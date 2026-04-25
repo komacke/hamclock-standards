@@ -39,7 +39,7 @@ def analyze_urls(filename):
 
         # Print Markdown Header
         print("| path | Argument | Units | Min | Max | Default | required | sample values |")
-        print("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
+        print("| :--- | :--- | :--: | :--: | :--: | :--: | :--: | :--- |")
 
         for path, info in sorted(data_map.items()):
             # If no arguments, just print the path row
